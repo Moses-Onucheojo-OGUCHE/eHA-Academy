@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagos - Travel Guide</title>
+    <style>
+        body {
+            background-color: rgba(209, 205, 199, 0.048);
+            color: rgb(57, 58, 58);
+            font-size: 15px;
+        }
+        h1 {
+            color: black;
+            font-size: 2em;
+            font-style: italic;
+        }
+        h3 {
+            color: black;
+            font-size: 1.3em;
+        }
+        h2 {
+            background-color: white;
+            color: blue;
+            border-image-width: auto;
+            font-size: 1.6em;
+        }
+        #photos {
+            height: auto;
+            width: 500px;
+            display: flex;
+        }
+        .photos-sidebar {
+            margin-bottom: 50px;
+        }
+        .home {
+            border-radius: 8px;
+            color: white;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ikoyi%2C_Lagos%2C_Nigeria.jpg/1024px-Ikoyi%2C_Lagos%2C_Nigeria.jpg'); 
+            background-size:cover;     
+            background-position: center;  
+            height: 30vh;               
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .home-content {
+            position: relative;
+            z-index: 2;  /* Ensures content appears above the overlay */
+            color: white;
+        }
+        .home-content h1 {
+            color: white;
+            font-size: 4em;
+            font-family: cursive;
+            font-weight: bolder;
+            font-style: normal;
+            margin: 0;
+        }
+        .home-content p {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for text readability */
+            border-radius: 8px;
+            z-index: 1;
+        }
+        .overview, .attractions p {
+            font-family:sans-serif;
+        }
+        .overview, .attractions h1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        </style>
+</head>
+<body>
+    <!--Home section-->
+    <section class="home">
+        <div class="home-content">
+            <h1>Ėkó ò ní bàjé!</h1>
+            <p>Home of Excellence and Beauty</p>
+        </div>
+    </section>
+    <!--Brief overview-->
+    <section class="overview">
+        <h1>Overview</h1>
+        <p> Lagos City, is a large metropolitan city in southwestern Nigeria. With an upper population estimate of 21 million, it is the largest city in Nigeria, 
+            and the most populous urban area on the African continent. Following the re-modernization project achieved by the previous administration of Governor Raji Babatunde Fashola, 
+            Lagos is gradually becoming a major tourist destination, being one of the largest cities in Africa and the world. Diasporan Africans and others, especially from East and Southern Africa,
+            are increasingly visiting Lagos mostly to understand and experience the Nigeria that has been presented to them by Nollywood.</p>
+    </section>
+    <!--Top atrractions-->
+    <section class="attractions">
+        <h1>Top Places to Visit</h1>
+        <ul>
+            <li><h2>Parks, Galleries and Conservation</h2></li>
+            <div class="photos-sidebar">
+                <h3>Lekki Conservation Centre</h3>
+                <img id="photos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Monkey_at_Lekki_Conservation_Centre_02.jpg/1067px-Monkey_at_Lekki_Conservation_Centre_02.jpg" alt="Monkey at Lekki Conservation Centre">
+                <p>The Lekki Conservation Centre is located in the centre of Lekki. The tourist area, which covers a land area of 78 hectares, is located on the Lekki Peninsula, next to the Lekki Lagoon, and near the Lagos Lagoon. The LCC’s  401-metre long canopy walkway is the longest canopy walkway in Africa. 
+                    It is a suspended swinging bridge walkway, featuring several types of vegetation and animals.</p>
+            </div>
+            <div class="photos-sidebar">
+                <h3>Freedom Park, Lagos</h3>
+                <img id="photos" src="https://lh5.googleusercontent.com/p/AF1QipNLyykV2q4Yi21dRkT51Z6ZJt5cCkRIapsfkxR4=w656-h369-k-no" alt="Freedom Park on Postcard">
+                <p>Freedom Park is a memorial and leisure park area in the middle of downtown Lagos in Lagos Island, Nigeria; the park symbolizes the transformation of colonial prison to a symbol of freedom. 
+                    Activities at the park include cultural shows and events, continental and traditional meals, and live music</p>
+            </div>
+            <div class="photos-sidebar">
+                <h3>Nike Art Gallery</h3>
+                <img id="photos" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtyrdUcRixAX6Vcyxdwb_c8Cuu-W5nYkfqUg&s" alt="A gallery with an array of photos">
+                <p>Nike Art Gallery is an art gallery in Lekki, Lagos, The gallery is one of the largest collections of indigenous Nigerian artwork, and is currently the largest privately-owned art gallery in Africa.</p>
+            </div>
+            <li><h2>Beaches</h2></li>
+            <div class="photos-sidebar">
+                <h3>Elegushi Beach</h3>
+                <img id="photos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/A-lady-swimming-at-elegushi-beach-lagos.jpg/1383px-A-lady-swimming-at-elegushi-beach-lagos.jpg" alt="A lady swimming at elegushi beach lagos">
+                <p>Elegushi Beach is a private beach located at Lekki, Lagos state, southwest Nigeria. The beach is owned by the Elegushi royal family in Lekki, Lagos state. Elegushi private beach is seen as one of the best beaches in Lagos and Nigeria at large. The beach entertains close to 40,000 guests every week with Sundays 
+                    being the best day on the beach. Over half of all guests that are entertained on the beach weekly visit on Sundays.
+                    Their gate pass is at 2000 naira flat rate but can be discounted if you have like a group.</p>
+            </div>
+            <div class="photos-sidebar">
+                <h3>Landmark Leisure Beach</h3>
+                <img id="photos"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sunset_at_Landmark_Beach.jpg/1423px-Sunset_at_Landmark_Beach.jpg" alt="Sunset at Landmark Beach">
+                <p>The Landmark Leisure Beach is a beach that is located in Lagos, Lagos State Nigeria. It is at numbers 3 & 4 Water Corporation Road, VI, Lagos.[6][7] The beach is open to the public every day. It employed paid lifeguards who watch over the beach and have rescued many people from drowning.</p>
+            </div>
+            <div class="photos-sidebar">
+                <h3>Tarkwa Bay Beach</h3>
+                <img id="photos" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Tarkwa_Bay_Beach_Front.jpg/1423px-Tarkwa_Bay_Beach_Front.jpg" alt="Tarkwa Bay Beach Front">
+                <p>Tarkwa Bay is an artificial sheltered beach located near the Lagos harbour in Nigeria. As an island, it is only accessible by boat or water taxis. The beach, popular with swimmers and water-sports enthusiasts, also has a welcoming resident community. 
+                    According to report, the entry fee to the Tarkwa Bay Beach is 2000 Naira for a day and 500 Naira to rent chairs and a thatched tent for the day.</p>
+            </div>
+        </ul>
+    </section>
+</body>
+</html>
