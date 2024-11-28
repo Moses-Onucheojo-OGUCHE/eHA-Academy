@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lagos - Travel Guide</title>
     <style>
+        @media (max-width: 640px) { 
+
+            /* CSS rules for devices with a maximum width of 640 pixels */ 
+
+            /* Adjust layout, font sizes, or any other styles as needed */ 
+
+        }
         body {
             background-color: rgba(209, 205, 199, 0.048);
             color: rgb(57, 58, 58);
@@ -27,7 +34,7 @@
         }
         #photos {
             height: auto;
-            width: 500px;
+            width: 800px;
             display: flex;
         }
         .photos-sidebar {
@@ -49,7 +56,7 @@
         }
         .home-content {
             position: relative;
-            z-index: 2;  /* Ensures content appears above the overlay */
+            z-index: 2;  
             color: white;
         }
         .home-content h1 {
@@ -72,7 +79,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for text readability */
+            background: rgba(0, 0, 0, 0.5); 
             border-radius: 8px;
             z-index: 1;
         }

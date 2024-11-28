@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Webpage color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transition: background-color 0.3s ease;
+        }
+        .content {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            color: #f4f4f9;
+            background-color: rgb(54, 54, 197);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        button:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body id="container">
+    <div class="content">
+        <h1>Change background color</h1>
+        <p>Click the button below to change background color</p>
+        <button onclick="toggleButton()">Click me</button>
+    </div>
+
+    <script>
+        function toggleButton() {
+            document.body.style.backgroundColor = 'blue';
+        }
+    </script>
+</body>
+</html>
