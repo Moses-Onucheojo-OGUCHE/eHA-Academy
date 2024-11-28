@@ -39,12 +39,17 @@
     <div class="content">
         <h1>Change background color</h1>
         <p>Click the button below to change background color</p>
-        <button onclick="toggleButton()">Click me</button>
+        <button id="toggleButton" onclick="toggleButton()">Click me</button>
     </div>
 
     <script>
         function toggleButton() {
-            document.body.style.backgroundColor = 'blue';
+            const button = document.getElementById("toggleButton");
+            if (document.body.style.backgroundColor === "blue") {
+                document.body.style.backgroundColor = "white";
+            } else {
+                document.body.style.backgroundColor = "blue";
+            }    
         }
     </script>
 </body>
