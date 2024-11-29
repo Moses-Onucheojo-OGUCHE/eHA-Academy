@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Car List</title>
 </head>
 <body>
-    
+    <script>
+        // Define the array
+        var cars = ["toyota", "honda", "mazda", "mitsubishi", "tesla", "lexus"];
+
+        // Log the first item, then the last item using length property
+        console.log("First Car:", cars[0]);
+        console.log("Last Car:", cars[cars.length - 1]);
+
+        // Add "mercedes-benz" to the array
+        cars.push("mercedes-benz");
+        // Log the updated array
+        console.log("Updated array:", cars);
+
+        // Loop through the array and log each item
+        console.log("All items in the array:");
+        for (var i=0; i < cars.length; i++) {
+            console.log(cars[i]);
+        }
+    </script>
 </body>
 </html>
