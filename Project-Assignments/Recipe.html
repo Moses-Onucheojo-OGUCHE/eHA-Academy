@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #222;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #444;
+        }
+
+        header nav a {
+            margin: 0 1px;
+            font-size: 1em;
+            font-weight: bold;
+            padding-right: 30px;
+        }
+
+        .hero {
+            background: url('https://st.focusedcollection.com/18590116/i/1800/focused_224830640-stock-photo-group-chef-chopping-vegetable-kitchen.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background: #ff4c4c;
+        }
+
+        .recipe-section {
+            padding: 20px 20px;
+            text-align: center;
+        }
+
+        .recipe-section ul, .recipe-section ol {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 90%;
+            object-fit: cover;
+        }
+
+        .image-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffffff;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000000;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #ff6b6b;
+            margin: 0 10px;
+        }
+
+        footer h2 {
+            color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header>
+        <div class="logo">Tasty Recipes</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Perfect Recipe Solution</h1>
+        <button onclick="scrollToContent()">Scroll to Explore</button>
+    </section>
+
+    <section id="pancakes">
+        <div class="image-container">
+            <img src="https://www.thespruceeats.com/thmb/rnSLVpjK_2Nzul6n3muyNJ2slaU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/how-to-make-pancakes-from-scratch-995800-11-5b3f987cc9e77c0037d98e28.jpg" alt="Pancakes on a wooden board"> <br>
+            <span class="image-label">Pancakes</span>
+        </div>
+         <!-- Ingredients Section -->
+            <div id="ingredients" class="recipe-section">
+                <h2>Ingredients</h2>
+                    <ul>
+                        <li>2 cups of flour</li>
+                        <li>2 tablespoons of sugar</li>
+                        <li>1 tablespoon of baking powder</li>
+                        <li>1/2 teaspoon of salt</li>
+                        <li>1 cup of milk</li>
+                        <li>2 large eggs</li>
+                        <li>2 tablespoons of melted butter</li>
+                    </ul>
+            </div>
+            
+            <!-- Instructions Section -->
+            <div id="instructions" class="recipe-section">
+                <h2>Instructions</h2>
+                    <ol>
+                        <li>Mix the dry ingredients together in a bowl.</li>
+                        <li>Whisk the wet ingredients in a separate bowl.</li>
+                        <li>Combine the wet and dry ingredients.</li>
+                        <li>Heat a skillet and pour batter to form pancakes.</li>
+                        <li>Cook until golden brown and serve with syrup.</li>
+                    </ol>
+            </div>
+    </section>
+    
+    <section id="chicken-stir-fry">
+        <div class="image-container">
+            <img src="https://www.allrecipes.com/thmb/yhGfpmse-RSLsZ4cE0sNHDaCr1o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/223382_chicken-stir-fry_Rita-1x1-1-b6b835ccfc714bb6a8391a7c47a06a84.jpg" alt="Chicken stir-fry">
+            <span class="image-label">Quick Chicken <br> Stir-Fry</span>
+        </div>
+
+        <!-- Ingredients Section -->
+            <div id="ingredients" class="recipe-section">
+                <h2>Ingredients</h2>
+                    <ul>
+                        <li>2 chicken breasts, thinly sliced</li>
+                        <li>2 cups mixed vegetables (bell peppers, broccoli, carrots, etc.)</li>
+                        <li>2 tbsp soy sauce</li>
+                        <li>1 tbsp honey</li>
+                        <li>1 tsp sesame oi</li>
+                        <li>2 tbsp vegetable oi</li>
+                    </ul>
+            </div>
+            
+            <!-- Instructions Section -->
+            <div id="instructions" class="recipe-section">
+                <h2>Instructions</h2>
+                <ol>
+                    <li>Heat vegetable oil in a skillet or wok over high heat. Cook the chicken slices until browned, about 5–7 minutes. Remove and set aside.</li>
+                    <li>Add vegetables to the skillet and stir-fry for 5 minutes.</li>
+                    <li>Mix soy sauce, honey, and sesame oil in a small bowl. Return the chicken to the skillet, pour the sauce over, and stir to combine.</li>
+                    <li>Cook for another 2 minutes and serve with rice or noodles.</li>
+                </ol>
+            </div>
+    </section>
+    
+    <section id="Caprese-toast">
+        <div class="image-container">
+            <img src="https://valentinascorner.com/wp-content/uploads/2022/04/Easy-Bruschetta-Caprese-760x507.jpg" alt="Caprese Toast">
+            <span class="image-label">10 mins Caprese Toast</span>
+        </div>
+        
+        <!-- Ingredients Section -->
+        <div id="ingredients" class="recipe-section">
+            <h2>Ingredients</h2>
+                <ul>
+                    <li>2 slices of bread (baguette or sourdough preferred)</li>
+                    <li>1 large tomato, sliced</li>
+                    <li>Fresh mozzarella, sliced</li>
+                    <li>Fresh basil leaves</li>
+                    <li>1 tbsp olive oil</li>
+                    <li>Balsamic glaze (optional)</li>
+                    <li>Salt and pepper</li>
+                </ul>
+            </div>
+            
+            <!-- Instructions Section -->
+            <div id="instructions" class="recipe-section">
+                <h2>Instructions</h2>
+                <ol>
+                    <li>Toast the bread slices until golden brown.</li>
+                    <li>Layer tomato slices, mozzarella, and basil leaves on each slice of toast.</li>
+                    <li>Drizzle with olive oil and balsamic glaze, and season with salt and pepper. Serve immediately.</li>
+                </ol>
+            </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <section id="about">
+            <div>
+                <h2>About Us</h2>
+                <p>Welcome to Tasty Recipe! We’re passionate about bringing the joy of cooking to your kitchen with easy-to-follow recipes that deliver big on flavor. 
+                    Whether you're a seasoned chef or just starting your culinary journey, our diverse collection of recipes is designed to inspire creativity and 
+                    make every meal memorable. From comforting classics to innovative dishes, Tasty Recipe is your go-to destination for delicious ideas, cooking tips, 
+                    and a community that loves good food as much as you do. Let’s cook up something amazing together!</p>
+                </div>
+        </section>
+        <p>&copy; 2024 Tasty Recipes</p>
+        <div id="contact" class="social-links">
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Pinterest</a> |
+            <a href="#Top">Back to top</a>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToContent() {
+            const overviewSection = document.getElementById("pancakes");
+            overviewSection.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>

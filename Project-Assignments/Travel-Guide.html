@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lagos - Travel Guide</title>
     <style>
-        @media (max-width: 640px) { 
-
-            /* CSS rules for devices with a maximum width of 640 pixels */ 
-
-            /* Adjust layout, font sizes, or any other styles as needed */ 
-
-        }
         body {
             background-color: rgba(209, 205, 199, 0.048);
             color: rgb(57, 58, 58);
@@ -25,41 +18,75 @@
         h3 {
             color: black;
             font-size: 1.3em;
+            font-style: italic;
         }
         h2 {
             background-color: white;
-            color: blue;
+            color: rgb(255, 0, 0);
             border-image-width: auto;
             font-size: 1.6em;
         }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgb(190, 190, 188);
+            background-size: contain;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-family: cursive;
+            font-size: 2em;
+            font-weight: bold;
+            color: #ff0000;         
+        }
+
+        header nav a {
+            margin: 5px 10px;
+            font-size: 1em;
+            font-weight: bold;
+            padding-right: 50px;
+        }
         #photos {
             height: auto;
-            width: 800px;
+            width: 450px;
             display: flex;
         }
         .photos-sidebar {
             margin-bottom: 50px;
         }
-        .home {
+        .hero {
             border-radius: 8px;
             color: white;
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ikoyi%2C_Lagos%2C_Nigeria.jpg/1024px-Ikoyi%2C_Lagos%2C_Nigeria.jpg'); 
             background-size:cover;     
             background-position: center;  
-            height: 30vh;               
+            height: 85vh;               
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
+            margin-top: 75px;
             text-align: center;
             position: relative;
         }
-        .home-content {
+        .hero-content {
             position: relative;
             z-index: 2;  
             color: white;
         }
-        .home-content h1 {
+        .hero-content h1 {
             color: white;
             font-size: 4em;
             font-family: cursive;
@@ -67,12 +94,12 @@
             font-style: normal;
             margin: 0;
         }
-        .home-content p {
+        .hero-content p {
             font-size: 1.8em;
             font-weight: bold;
             margin-top: 10px;
         }
-        .home::before {
+        .hero::before {
             content: "";
             position: absolute;
             top: 0;
@@ -89,12 +116,50 @@
         .overview, .attractions h1 {
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
+        section {
+            margin: 40px auto;
+            max-width: 1050px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: rgb(190, 190, 188);
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+        }
+        footer p {
+            color: rgb(255, 0, 0);
+            font-size: large;
+            margin-left: 10px;
+        }
+        footer a {
+            color: rgb(38, 38, 39);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
         </style>
 </head>
 <body>
-    <!--Home section-->
-    <section class="home">
-        <div class="home-content">
+    <!--Header Section-->
+    <header>
+        <div class="logo">Your Travel Guide</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#top-atrractions">Attractions</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <!--Hero section-->
+    <section id="home" class="hero">
+        <div class="hero-content">
             <h1>Ėkó ò ní bàjé!</h1>
             <p>Home of Excellence and Beauty</p>
         </div>
@@ -108,7 +173,7 @@
             are increasingly visiting Lagos mostly to understand and experience the Nigeria that has been presented to them by Nollywood.</p>
     </section>
     <!--Top atrractions-->
-    <section class="attractions">
+    <section id="top-atrractions" class="attractions">
         <h1>Top Places to Visit</h1>
         <ul>
             <li><h2>Parks, Galleries and Conservation</h2></li>
@@ -140,7 +205,7 @@
             <div class="photos-sidebar">
                 <h3>Landmark Leisure Beach</h3>
                 <img id="photos"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sunset_at_Landmark_Beach.jpg/1423px-Sunset_at_Landmark_Beach.jpg" alt="Sunset at Landmark Beach">
-                <p>The Landmark Leisure Beach is a beach that is located in Lagos, Lagos State Nigeria. It is at numbers 3 & 4 Water Corporation Road, VI, Lagos.[6][7] The beach is open to the public every day. It employed paid lifeguards who watch over the beach and have rescued many people from drowning.</p>
+                <p>The Landmark Leisure Beach is a beach that is located in Lagos, Lagos State Nigeria. It is at numbers 3 & 4 Water Corporation Road, VI, Lagos. The beach is open to the public every day. It employed paid lifeguards who watch over the beach and have rescued many people from drowning.</p>
             </div>
             <div class="photos-sidebar">
                 <h3>Tarkwa Bay Beach</h3>
@@ -150,5 +215,9 @@
             </div>
         </ul>
     </section>
+    <!--Footer section-->
+    <footer>
+        <p id="contact">Contact US: <a href="https://yourtravelguide@gmail.com">yourtravelguide@gmail.com</a> | <a href="#Top">Back to top</a></p>
+    </footer>
 </body>
 </html>
