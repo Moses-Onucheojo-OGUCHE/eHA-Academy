@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Programming Journey</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>My Web Programming Journey</h1>
+            <p>Sharing my progress, challenges, and achievements as I learn web development.</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section id="blog" class="blog container">
+            <article class="blog-post">
+                <h3>Week 4-7: UI/UX Design - Intro to HTML/CSS: Making Webpages</h3>
+                <p>Within these weeks, I learned about HTML, the backbone of web pages. It’s fascinating to see how simple tags like "&lt;p&gt;" and "&lt;h1&gt;" can structure content.</p>
+                <p>Here’s a simple example of what I practiced:</p>
+                <pre>
+                    &lt;html&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;My First Page&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;h1&gt;Hello, World!&lt;/h1&gt;
+                            &lt;p&gt;Welcome to my first webpage.&lt;/p&gt;
+                            &lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <p>We learnt a lot about CSS too, the magic behind a beautiful webpage. CSS has been a game-changer! I learned about selectors, properties, and how to make web pages visually appealing.</p>
+                <p>Here’s an example of a CSS rule I created:</p>
+                    <pre>
+                        footer {
+                            text-align: center;
+                            padding: 10px 0;
+                            background: #333;
+                            color: white;
+                        }
+                    </pre>
+                <p>With CSS, I transformed my plain HTML into something visually appealing and user-friendly. Building my first webpage was exciting experience. It shows that I am capable to do whatsoever I'm determined to do!</p>
+            </article>
+        </section>
+
+        <section id="contact" class="contact container">
+            <h2>Contact</h2>
+            <p>If you’d like to connect, feel free to reach out!</p>
+            <form id="contact-form">
+                <label for="name"><strong>Name:</strong></label>
+                <input type="text" id="name" name="name" required>
+                <label for="email"><strong>Email:</strong></label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section id="back-btn" class="back-btn container">
+            <article class="blog-post">
+                <a href="#top">Back to top</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Web Programming Journey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>    
