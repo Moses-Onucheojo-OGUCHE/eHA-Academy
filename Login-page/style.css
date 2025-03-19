@@ -98,6 +98,12 @@ body {
     gap: 8px;
 }
 
+input#remember-me {
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #f3f4f6;
+}
+
 button {
     background: rgba(258, 258, 258, 0.25);
     color: white;
@@ -110,6 +116,11 @@ button {
     justify-content: center;
     width: 100%;
     margin: 25px 0px 10px 0px;
+}
+
+button:hover {
+    background: white;
+    color: black;
 }
 
 .dont-have-an-account a {
